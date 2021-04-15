@@ -2,7 +2,7 @@ const express = require ('express');
 const morgan = require('morgan');
 const cors = require('cors');
 const {getAllMessages, getSingleMessage} = require('./controllers/message.js')
-const {getAllUsers, getSingleUser} = require('./controllers/user.js')
+const {getAllUsers, getSingleUser, getUserMessage} = require('./controllers/user.js')
 
 // import express from 'express';
 // import morgan from 'morgan'; 
@@ -28,5 +28,7 @@ app.route('/messages').get(getAllMessages);
 app.route('/messages/:id').get(getSingleMessage);
 app.route('/users').get(getAllUsers);
 app.route('/users/:id').get(getSingleUser)
+app.route('/users/:id/message').get(getUserMessage);
+app.route('/me')
 
 app.listen(port, ()=> console.log(`server is listening on port ${port} `))
