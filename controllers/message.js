@@ -1,4 +1,4 @@
-const pool = require('../pg.js');
+import pool from '../pg.js';
 
 const getAllMessages = async (req, res) => {
    try {
@@ -20,4 +20,4 @@ const getSingleMessage = async (req, res) => {
    }catch (error) {res.status(500).json(error)}
 }
 
-module.exports = {getAllMessages, getSingleMessage}
+export {getAllMessages, getSingleMessage}
