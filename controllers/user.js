@@ -1,4 +1,5 @@
-const pool = require('../pg.js');
+// const pool = require('../pg.js');
+import pool from '../pg.js';
 
 const getAllUsers = async (req, res) => {
 // res.send('get All users')
@@ -34,6 +35,6 @@ const getUserMessage = async (req, res) => {
    } catch(error) {res.status(500).json()}
 }
 
-module.exports = {getAllUsers, getSingleUser, getUserMessage}
+export {getAllUsers, getSingleUser, getUserMessage}
 
 //SELECT*FROM message INNER JOIN user1 ON message.id-user=user1.id
