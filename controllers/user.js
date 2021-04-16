@@ -1,5 +1,5 @@
 // const pool = require('../pg.js');
-import pool from '../pg.js';
+import pool from '../db/pg.js';
 
 const getAllUsers = async (req, res) => {
 // res.send('get All users')

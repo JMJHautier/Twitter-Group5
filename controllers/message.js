@@ -1,4 +1,4 @@
-import pool from '../pg.js';
+import pool from '../db/pg.js';
 
 const getAllMessages = async (req, res) => {
    try {
