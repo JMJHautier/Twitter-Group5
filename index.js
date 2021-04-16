@@ -10,7 +10,7 @@ import me from './routes/me.js'
 
 const app = express();
 const port = process.env.PORT || 3000;
-const CORSOption = {origin: process.env.ORIGIN || 'http://localhost:3000'||"https://github.com/Petersool/twitterclone"||"https://petersool.github.io/twitterclone/#/"}
+const CORSOption = {origin: process.env.ORIGIN || 'http://localhost:3000'}
 
 app.set('view engine', 'pug')
 
